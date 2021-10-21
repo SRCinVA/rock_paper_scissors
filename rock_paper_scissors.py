@@ -15,7 +15,26 @@ while True:
         continue  # ... which just asks them to type in something valid
     
     random_number = random.randint(0,2) # 0 is rock, 1 is paper, and 2 is scissors
-        
+    computer_pick = options[random_number] # it just pulls an index randomly from the list
+    print("The computer", computer_pick + ".")
 
+    if user_input == "rock" and computer_pick == "scissors":
+        print("You won!!")
+        user_wins += 1
+
+    elif user_input == "paper" and computer_pick == "rock":
+        print("You won!!")
+        user_wins += 1
+
+    elif user_input == "scissors" and computer_pick == "paper":
+        print("You won!!")
+        user_wins += 1
+
+    elif user_input == computer_pick:
+        print("It's a tie!!")
+
+    else:
+        print("You lost!!")
+        computer_wins += 1
 
 print("Goodbye!")
